@@ -824,8 +824,7 @@ if(google_consent_mode === 'set'){
   setDefaultConsentState(consentState);
 }
 
-const Elmo = copyFromWindow("Elmo");
-log(Elmo);
+const Elmo = copyFromWindow("Elmo")
 if (Elmo && Elmo.consents){
   const consentState = {
     'analytics_storage': (Elmo.consents.analytics) ? 'granted' : 'denied',
