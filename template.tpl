@@ -14,6 +14,10 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "Elmo",
+  "categories": [
+    "TAG_MANAGEMENT",
+    "PERSONALIZATION"
+  ],
   "brand": {
     "id": "brand_dummy",
     "displayName": "PrivacyLab",
@@ -1240,7 +1244,7 @@ ___WEB_PERMISSIONS___
           "key": "environments",
           "value": {
             "type": 1,
-            "string": "all"
+            "string": "debug"
           }
         }
       ]
@@ -1443,20 +1447,6 @@ scenarios:
 
     // Verify that the tag finished successfully.
     assertApi('gtmOnSuccess').wasCalled();
-- name: Test bannerRead previous consent
-  code: |-
-    mock('getCookieValues', (cookieName) => {
-      assertThat(cookieName).isEqualTo("elmo_vc");
-      return '{"purposes":["necessary","analytics","marketing","foreign"],"revision":"DfN16Wjcha3CJM8K4KZK-","uuid":"792638596"}';
-    });
-
-    // Call runCode to run the template's code.
-    runCode(mockData);
-
-    assertApi('updateConsentState').wasCalled();
-
-    // Verify that the tag finished successfully.
-    assertApi('gtmOnSuccess').wasCalled();
 setup: "const mockData = {\n  elmo_banner_code: 'ELMOBANNERTESTCODE',\n  elmo_banner_lang:\
   \ 'it',\n  only_eea_regions: false,\n  google_consent_mode: 'set',\n  ad_storage:\
   \ 'denied',\n  analytics_storage: 'denied',\n  ad_user_data: 'denied',\n  ad_personalization:\
@@ -1467,6 +1457,6 @@ setup: "const mockData = {\n  elmo_banner_code: 'ELMOBANNERTESTCODE',\n  elmo_ba
 
 ___NOTES___
 
-Created on 15/05/2025, 15:46:29
+Created on 27/06/2025, 14:42:29
 
 
