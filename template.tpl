@@ -14,10 +14,7 @@ ___INFO___
 "version": 1,
 "securityGroups": [],
 "displayName": "Elmo",
-"categories": [
-"TAG_MANAGEMENT",
-"PERSONALIZATION"
-],
+"categories": ["TAG_MANAGEMENT","PERSONALIZATION"],
 "brand": {
 "id": "brand_dummy",
 "displayName": "PrivacyLab",
@@ -1457,6 +1454,6 @@ setup: "const mockData = {\n  elmo_banner_code: 'ELMOBANNERTESTCODE',\n  elmo_ba
 
 ___NOTES___
 
-Created on 01/07/2025, 15:32:06
+Created on 01/07/2025, 15:39:14
 
 
