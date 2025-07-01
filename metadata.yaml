@@ -1,0 +1,7 @@
+homepage: "https://www.elmobot.eu/"
+documentation: "https://www.elmobot.eu/IT/2547/configurazione-del-plugin-gtm/?nLang=2"
+versions:
+  # Latest version
+  - sha: ff6ef60a54a72be42a377c4c591dd45f45cb2b42
+    changeNotes: Initial release of Elmo Template for GTM.
+  # Legacy versions
