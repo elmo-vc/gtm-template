@@ -845,7 +845,7 @@ if (elmo_banner_lang !== "skip"){
   }
   
   //If the elmo_banner_lang code is not one of the valid parameters, i'll force the default translation (it)
-  if (!valid_languages[elmo_banner_lang]){
+  if (valid_languages.indexOf(elmo_banner_lang) < 0){
     elmo_banner_lang = "it";
   }
   
